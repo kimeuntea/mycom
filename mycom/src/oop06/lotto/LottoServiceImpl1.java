@@ -57,8 +57,10 @@ public class LottoServiceImpl1 implements LottoService1 {
 				System.out.print(lottos[j][j2] + "\t");
 			}
 		}
-
-		sort(lottos);
+ for (int k = 0; k < lottos.length; k++) {
+	 sort(lottos[k]);
+}
+		
 
 	}
 
@@ -93,16 +95,15 @@ public class LottoServiceImpl1 implements LottoService1 {
 	}
 
 	@Override
-	public void sort(int array[][]) {
+	public void sort(int array[]) {
 		// TODO Auto-generated method stub
 
-		for (int i = 0; i < array.length; i++) {
-			for (int j = 0; j <= array[i].length; j++) {
-				for (int k = j + 1; k < array[i].length; k++) {
-					if (array[i][j] > array[i][k]) {
-						arr[0][0] = array[i][j];
-						array[i][j] = array[i][k];
-						array[i][k] = arr[0][0];
+			for (int j = 0; j <= array.length; j++) {
+				for (int k = j + 1; k < array.length; k++) {
+					if (array[j] > array[k]) {
+						arr[0][0] = array[j];
+						array[j] = array[k];
+						array[k] = arr[0][0];
 						/*System.out.print(array[i][0]);
 						System.out.print(array[i][1]);
 						System.out.print(array[i][2]);
@@ -115,7 +116,7 @@ public class LottoServiceImpl1 implements LottoService1 {
 
 		}
 
-	}
+	
 
 	@Override
 	public int getCount(int money) {

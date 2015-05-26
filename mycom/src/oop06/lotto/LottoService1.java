@@ -36,7 +36,7 @@ public interface LottoService1 {
 	 로또 번호를 출력할때  
 	 오름차순 을 나타내야할때 사용되는 로직 
 	  
-	 */public void sort(int[][] array); 
+	 */public void sort(int[] array); 
 	 /* 
 	 금액이 결정된뒤 몇번 extractLottos() 
 	 를 돌릴것인가 
